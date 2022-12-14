@@ -233,7 +233,7 @@ Sí, aunque los ciclos son una especie de condicionales, nada nos impide agregar
 
 ### 2️⃣ Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
 
-```
+```js
 for (let i = 0; i < 5; i++) {
     console.log("El valor de i es: " + i);
 }
@@ -249,22 +249,66 @@ while (i < 5) {
     i++;
 }
 
-### 3️⃣ Escribe un código en JavaScript que le pregunte a los usuarios cuánto es `2 + 2`. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
+let i = 10
 
+while (i >= 2) {
+    console.log("El valor de i es: " + i);
+    i--
+}
+
+### 3️⃣ Escribe un código en JavaScript que le pregunte a los usuarios cuánto es `2 + 2`. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
 > 💡 Pista: puedes usar la función prompt de JavaScript.
 
+let respuesta = prompt('¿Cuánto es 2 + 2?'); 
+
+let respuesta;
+
+while (respuesta != '4') {
+    let pregunta = prompt ('Cuánto es 2 + 2')
+    respuesta = pregunta;
+}
 
 ## Listas
 
 ### 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
 
 - ¿Qué es un array?
+
+Es una lista de elementos. Las listas son conjuntos de elementos.
+Ejemplo:
+    const array = [1, 'jaja', true, false];
+
 - ¿Qué es un objeto?
+
+Es una lista de elementos, pero cada elemento tiene un nombre clave.
+Ejemplo:
+    const obj = {
+        nombre = 'Sebas',
+        edad = 27
+    };
+
 - ¿Cuándo es mejor usar objetos o arrays?
+
+Arrays cuando lo que haremos en un elemento es lo mismo que en todos los demás (la regla se puede incumplir). Mientras que un objeto cuando los nombre de cada elemento son importante para nuestro algoritmo.
+
 - ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+
+Sí. Los arrays pueden guardar objetos. Y los objetos pueden guardar arrays entre sus propiedades. 
 
 ### 2️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
 
+fuction imprimirPrimerElementoArray(arr) {
+    console.log(obj.lala)
+    console.log(arr[0])
+}
+imprimirPrimerElementoArray(['Vino', 'Galletas'])
+
 ### 3️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).
+function imprimirElementoPorElemento(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+    }
+}
+imprimirElementoPorElemento('Buñelos', 'Natilla', 'Masato')
 
 ### 4️⃣ Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).
