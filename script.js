@@ -1,24 +1,58 @@
-// h1 { color: red }
-// .clasp { ... }
-// #pid { ... }
-
 const h1 = document.querySelector('h1');
-const p = document.querySelector('p');
-const clasp = document.querySelector('.clasp');
-const pid = document.querySelector('#pid');
-const input = document.querySelector('input');
+const form = document.querySelector('#form');
+const input1 = document.querySelector('#calculo1');
+const input2 = document.querySelector('#calculo2');
+const btn = document.querySelector('#botonCal')
 
-console.log(h1);
+form.addEventListener('submit', sumarInputValues);
 
-console.log(input.value);
+function sumarInputValues(event) {
+    //console.log(event);
+    event.preventDefault();
+    const sumaInputs = input1.value + input2.value;
+    pResul.innerText ="Resultado: " + sumaInputs;
+}
 
-console.log({
-    h1,
-    p,
-    clasp,
-    pid,
-    input
-});
+btn.addEventListener('click', sumarInputValues);
+
+function sumarInputValues(event) {
+    //console.log(event);
+    //event.preventDefault();
+    const sumaInputs = input1.value + input2.value;
+    pResul.innerText ="Resultado: " + sumaInputs;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log(h1);
+
+// console.log(input.value);
+
+// console.log({
+    // h1,
+    // p,
+    // clasp,
+    // pid,
+    // input
+// });
 
 // h1.innerHTML = 'Bazinga <br> Of: Sheldon Cooper';
 
@@ -32,21 +66,22 @@ console.log({
 
 // h1.setAttribute('class', 'rojo');
 
-h1.classList.add('azul');
-h1.classList.remove('verde');
+// h1.classList.add('azul');
+// h1.classList.remove('verde');
 
 // h1.classList.toggle('verde');
 // h1.classList.contains('verde');
 
-input.value= "Mario Mendoza";
+// input.value= "";
 
-const img = document.createElement('img');
-img.setAttribute('src', 'https://i.imgur.com/PfA0M2o.gif');
+// const img = document.createElement('img');
+// img.setAttribute('src', 'https://i.imgur.com/PfA0M2o.gif');
 
-console.log(img);
+// console.log(img);
 
-pid.innerHTML = "";
-pid.append(img);
+// pid.innerHTML = "";
+// pid.append(img);
+
 
 
 
